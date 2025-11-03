@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mar4ik.pro']
+ALLOWED_HOSTS = ['online-booking-dqkg.onrender.com']
 
 
 # Application definition
