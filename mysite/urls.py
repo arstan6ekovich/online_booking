@@ -9,9 +9,8 @@ from django.conf.urls.i18n import i18n_patterns
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="ᴍᴀʀ𝟦ɪᴋ ᴘʀᴏᴊᴇᴄᴛ || ʙᴏᴏᴋɪɴɢ 🦄",
-        default_version='v1',
-    ),
+    title="ᴍᴀʀ𝟦ɪᴋ ᴘʀᴏᴊᴇᴄᴛ || ʙᴏᴏᴋɪɴɢ 🦄",
+    default_version='v1',),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
