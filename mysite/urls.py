@@ -9,8 +9,10 @@ from django.conf.urls.i18n import i18n_patterns
 
 schema_view = get_schema_view(
     openapi.Info(
-    title="ᴍᴀʀ𝟦ɪᴋ ᴘʀᴏᴊᴇᴄᴛ || ʙᴏᴏᴋɪɴɢ 🦄",
-    default_version='v1',),
+        title="ᴍᴀʀ𝟦ɪᴋ ᴘʀᴏᴊᴇᴄᴛ || ʙᴏᴏᴋɪɴɢ 🦄",
+        default_version='v1',
+        description="API documentation",
+    ),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
@@ -19,5 +21,8 @@ urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('api/v1/', include('booking_app.urls')),
     path('accounts/', include('allauth.urls')),
-    path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+]
